@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>AI Ticket Analyzer</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;margin:20px;}
+    .panel{border:1px solid #ddd;padding:12px;border-radius:6px;margin-bottom:12px}
+    label{display:block;margin-top:8px}
+    .tags{background:#f3f3f3;padding:6px;border-radius:4px;display:inline-block;margin-right:6px}
+    pre{white-space:pre-wrap;background:#fafafa;padding:8px;border-radius:4px}
+    .small{font-size:0.9em;color:#555}
+    .hidden{display:none}
+  </style>
+</head>
+<body>
+  <h1>AI Ticket Analyzer</h1>
+
+  <div class="panel">
+    <form id="uploadForm">
+      <label>Select a ticket file (txt, csv, pdf)</label>
+      <input id="fileInput" type="file" accept=".txt,.csv,.pdf"/>
+      <button id="analyzeBtn" type="submit">Analyze</button>
+    </form>
+    <div id="status" class="small"></div>
+  </div>
+
+  <div id="result" class="panel hidden">
+    <h2>Analysis Result</h2>
+    <p><strong>Preview:</strong> <span id="preview"></span></p>
+    <p><strong>Category:</strong> <span id="category">—</span></p>
+    <p><strong>Tags:</strong> <span id="tags">—</span></p>
+    <p><strong>Suggested Priority:</strong> <span id="priority">—</span></p>
+    <p><strong>Confidence:</strong> <span id="confidence">—</span></p>
+    <p><strong>Solution:</strong></p>
+    <pre id="solution"></pre>
+
+    <div id="similarContainer" style="display:none;">
+      <h4>Similar tickets</h4>
+      <div id="similarList"></div>
+    </div>
+
+    <hr/>
+    <h3>Provide feedback / correct labels</h3>
+    <form id="feedbackForm">
+      <input type="hidden" id="orig_text" />
+      <label>Final Category <input id="final_category" type="text"/></label>
+      <label>Final Tags (comma separated) <input id="final_tags" type="text"/></label>
+      <label>Final Priority
+        <select id="final_priority">
+          <option>High</option><option selected>Medium</option><option>Low</option>
+        </select>
+      </label>
+      <label>Agent note</label>
+      <textarea id="agent_note" rows="3" style="width:100%"></textarea>
+      <button id="sendFeedback" type="submit">Submit Feedback</button>
+      <span id="fbStatus" class="small"></span>
+    </form>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

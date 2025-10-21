@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>AI Ticket Admin</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;margin:20px;}
+    button{margin-right:8px}
+    table{border-collapse:collapse;width:100%;margin-top:8px}
+    th,td{border:1px solid #ddd;padding:6px;font-size:0.9em}
+    pre{white-space:pre-wrap;max-height:200px;overflow:auto}
+  </style>
+</head>
+<body>
+  <h1>Admin — Logs & Feedback</h1>
+  <div>
+    <button id="loadLogs">Load LLM Logs</button>
+    <button id="loadFeedback">Load Feedback</button>
+    <button id="downloadLogs">Download llm_logs.jsonl</button>
+    <button id="downloadFeedback">Download feedback.csv</button>
+    <button id="downloadProcessed">Download processed_tickets.csv</button>
+  </div>
+
+  <h2>LLM Logs (latest)</h2>
+  <div id="logs"></div>
+
+  <h2>Feedback (latest)</h2>
+  <div id="feedback"></div>
+
+  <script src="/static/admin_script.js"></script>
+</body>
+</html>
