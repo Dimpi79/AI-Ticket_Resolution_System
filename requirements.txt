@@ -6,4 +6,6 @@ pandas
 PyPDF2
 scikit-learn
 datasets
+gunicorn>=20.0.0
+
 
