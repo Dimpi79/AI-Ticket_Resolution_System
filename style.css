@@ -1,0 +1,6 @@
+body { font-family: Arial; text-align: center; background: #f0f2f5; color: #333; padding:20px; }
+.upload-card { margin: 30px auto; padding: 20px; border: 2px dashed #007bff; border-radius:10px; width:300px; background:#e0e7ff; }
+#fileInput { width:100%; padding:10px; border-radius:5px; border:1px solid #007bff; cursor:pointer; }
+.result { margin-top:20px; padding:20px; border-radius:10px; background:#fff; box-shadow:0 4px 6px rgba(0,0,0,0.1); text-align:left; }
+.hidden { display:none; }
+#fileName { margin-top:10px; font-weight:bold; }

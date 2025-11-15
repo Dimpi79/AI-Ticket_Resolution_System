@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+env/
+venv/
+.venv/
+build/
+dist/
+.eggs/
+*.egg-info/
+pip-wheel-metadata/
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+
+# Virtual envs & IDE
+.env
+.env.*
+.vscode/
+.idea/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Application data & secrets
+data/
+instance/
+*.sqlite3
+*.db
+*.pem
+*.key
+
+# Byte-compiled / distribution
+*.egg
+*.egg-info
+
+# Local config
+local_settings.py
+
+# Logs
+*.log

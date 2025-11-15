@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Ticket Analyzer</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="brand">AI Ticket Analyzer</h1>
+      <p class="tagline">Quickly analyze support tickets, recommend KB articles and collect feedback.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card upload-card">
+      <form id="uploadForm" class="upload-form">
+        <label class="label">Select a ticket file (txt, csv, pdf)</label>
+        <input id="fileInput" type="file" accept=".txt,.csv,.pdf"/>
+        <div class="actions">
+          <button id="analyzeBtn" type="submit" class="btn btn-primary">Analyze</button>
+          <span id="status" class="status small"></span>
+        </div>
+      </form>
+    </section>
+
+    <section id="result" class="card hidden result-card">
+      <div class="result-grid">
+        <div>
+          <h2>Analysis</h2>
+          <div class="meta"><strong>Preview:</strong> <span id="preview"></span></div>
+          <div class="meta"><strong>Category:</strong> <span id="category">—</span></div>
+          <div class="meta"><strong>Tags:</strong> <span id="tags">—</span></div>
+          <div class="meta"><strong>Suggested Priority:</strong> <span id="priority">—</span></div>
+          <div class="meta"><strong>Confidence:</strong> <span id="confidence">—</span></div>
+        </div>
+
+        <div>
+          <h3>Solution</h3>
+          <pre id="solution" class="solution-box">—</pre>
+        </div>
+      </div>
+
+      <div id="similarContainer" class="section hidden">
+        <h4>Similar tickets</h4>
+        <div id="similarList" class="list"></div>
+      </div>
+
+      <div id="articleContainer" class="section hidden">
+        <h4>Recommended Support Articles</h4>
+        <div id="articleList" class="list"></div>
+      </div>
+
+      <hr/>
+      <h3>Provide feedback / correct labels</h3>
+      <form id="feedbackForm" class="feedback-form">
+        <input type="hidden" id="orig_text" />
+        <div class="form-row">
+          <label>Final Category <input id="final_category" type="text"/></label>
+          <label>Final Tags <input id="final_tags" type="text" placeholder="tag1, tag2"/></label>
+          <label>Final Priority
+            <select id="final_priority">
+              <option>High</option><option selected>Medium</option><option>Low</option>
+            </select>
+          </label>
+        </div>
+        <label>Agent note</label>
+        <textarea id="agent_note" rows="3"></textarea>
+        <div class="actions">
+          <button id="sendFeedback" type="submit" class="btn">Submit Feedback</button>
+          <span id="fbStatus" class="small"></span>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">Made with ❤️ — AI Ticket Support</div>
+  </footer>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

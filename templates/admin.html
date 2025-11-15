@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Ticket Admin</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="site-header admin-header">
+    <div class="container">
+      <h1 class="brand">Admin — Logs & Feedback</h1>
+      <p class="tagline">View recent LLM logs, feedback, and download data.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="card toolbar">
+      <button id="loadLogs" class="btn">Load LLM Logs</button>
+      <button id="loadFeedback" class="btn">Load Feedback</button>
+      <button id="downloadLogs" class="btn">Download llm_logs.jsonl</button>
+      <button id="downloadFeedback" class="btn">Download feedback.csv</button>
+      <button id="downloadProcessed" class="btn">Download processed_tickets.csv</button>
+      <button class="btn" onclick="window.location.href='/admin/gaps'">View Content Gaps</button>
+    </div>
+
+    <section class="card">
+      <h2>LLM Logs (latest)</h2>
+      <div id="logs"></div>
+    </section>
+
+    <section class="card">
+      <h2>Feedback (latest)</h2>
+      <div id="feedback"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">AI Ticket Support — Admin</div>
+  </footer>
+
+  <script src="/static/admin_script.js"></script>
+</body>
+</html>
