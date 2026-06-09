@@ -5,7 +5,7 @@ openai
 PyPDF2
 datasets==2.14.6
 streamlit==1.28.0
-pandas==2.0.3
+pandas==1.5.3
 plotly==5.15.0
 matplotlib==3.7.2
 wordcloud==1.9.2
@@ -14,4 +14,4 @@ gunicorn
 python-dotenv
 tiktoken
 setuptools
-numpy==1.24.3
+numpy==1.23.5
