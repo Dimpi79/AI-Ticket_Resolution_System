@@ -9,6 +9,15 @@ Provide an analytics dashboard for tracking system performance
 
 This project includes a Flask backend, a Streamlit analytics dashboard, and a beautiful front-end interface for uploading tickets and viewing AI-powered insights.
 
+🌐 Live Deployment
+Service :
+AI Ticket Analyzer - https://ai-ticket-resolution-system.onrender.com 
+Admin Panel - https://ai-ticket-resolution-system.onrender.com/admin 
+
+Demo Credentials
+Username - admin
+Password - changeme
+
 🚀 Features - 
 🧠 AI Ticket Analyzer
 Extracts key information from PDF/txt/CSV support tickets
